@@ -16,6 +16,10 @@ jobs:
           node-version: 20
       - name: Install dependencies
         run: cd frontend && npm install
+      - name: Set git user
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
       - name: Deploy
         run: cd frontend && npm run deploy
         env:
