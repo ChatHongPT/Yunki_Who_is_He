@@ -17,7 +17,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "cross-env GH_TOKEN=$GH_TOKEN gh-pages -d build -r https://$GH_TOKEN@github.com/hongttochi/Yunki_Who_is_He.git"
+    "deploy": "gh-pages -d build -r https://$GH_TOKEN@github.com/hongttochi/Yunki_Who_is_He.git"
   },
   "eslintConfig": {
     "extends": [

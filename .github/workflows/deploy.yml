@@ -15,14 +15,12 @@ jobs:
         with:
           node-version: 20
       - name: Install dependencies
-        run: cd frontend && npm install
+        run: npm install
       - name: Set git user
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
       - name: Deploy
-        run: |
-          cd frontend
-          npx gh-pages -d build -r https://$GH_TOKEN@github.com/hongttochi/Yunki_Who_is_He.git
+        run: npx gh-pages -d build -r https://$GH_TOKEN@github.com/hongttochi/Yunki_Who_is_He.git
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
